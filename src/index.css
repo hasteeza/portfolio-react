@@ -2,20 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-
+html{
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
 body{
-    @apply bg-[rgb(30,30,30)] text-[rgb(255,255,255)] 
+    @apply bg-black text-[rgb(255,255,255)] 
 }
-
-.responsive-navbar{
-    @apply list-none flex gap-10 font-bold text-xl;
-
-    @media (max-width: 1023px){
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-    }
-}
+body.hero-page {
+    margin: 0;
+    padding: 0;
+  }
