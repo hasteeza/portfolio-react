@@ -161,7 +161,7 @@ export function About() {
         >
           <h6 className="flex items-center gap-2 text-base font-semibold">
             <IoIosSend />
-            Call to Touch
+            Call to Action
           </h6>
           <div className="flex flex-col items-center gap-2 ">
             <a
