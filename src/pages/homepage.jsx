@@ -5,8 +5,10 @@ import { Experience } from "../components/exp";
 import { Skills } from "../components/skills";
 import { Projects } from "../components/projects";
 import { Gallery } from "../components/gallery";
+import Achievement from "../components/achievement";
+import Footer from "../components/footer";
 
-function Portfolio() {
+function HomePage() {
   return (
     <>
       <Header />
@@ -15,8 +17,10 @@ function Portfolio() {
       <Skills />
       <Projects />
       <Gallery />
+      <Achievement />
+      <Footer />
     </>
   );
 }
 
-export default Portfolio;
+export default HomePage;

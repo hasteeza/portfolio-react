@@ -6,6 +6,15 @@ export default {
   ],
   theme: {
     extend: {
+      keyframes: {
+        shine: {
+          "0%": { backgroundPosition: "100%" },
+          "100%": { backgroundPosition: "-100%" },
+        },
+      },
+      animation: {
+        shine: "shine 5s linear infinite",
+      },
       screens: {
         '2xl': {'max': '1535px'},
         // => @media (max-width: 1535px) { ... }
@@ -28,6 +37,12 @@ export default {
       fontFamily: {
         inter: ['Inter', 'sans-serif'],  // Set Inter as the default font
         geist: ['Geist Sans', 'sans-serif'],
+        plex: ['IBM Plex Mono', 'monospace'],
+        bebas: ['Bebas Neue', 'sans-serif'],
+        galaxy: ['SF Distant Galaxy', 'sans-serif'],
+        russo: ["Russo One", "sans-serif"],
+        orbitron: ["Orbitron", "sans-serif"],
+        iso: ["Rubik Iso", "sans-serif"],
       },
     },
   },
