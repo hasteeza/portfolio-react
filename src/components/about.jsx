@@ -96,7 +96,7 @@ export function About() {
           </p>
         </div>
         <img
-          fetchPriority="high"
+          fetchpriority="high"
           width={200}
           data-aos="fade-zoom-in"
           data-aos-duration="1500"
@@ -108,7 +108,7 @@ export function About() {
           alt="Terence"
         />
       </div>
-      <div className="grid grid-cols-3 items-center mt-10 justify-evenly gap-2 font-geist md:grid-cols-1">
+      <div className="grid grid-cols-3 items-center mt-10 justify-evenly gap-2 font-geist md:grid-cols-1 md:gap-4">
         <div
           data-aos="fade-up"
           data-aos-duration="1000"

@@ -10,7 +10,12 @@ import PortfolioPage from "./pages/portfoliopage";
 import CertificationPage from "./pages/certificationpage";
 function App() {
   useEffect(() => {
-    AOS.init({});
+    if (!window.AOSInitialized) {
+      AOS.init({
+        once: true,
+      });
+      window.AOSInitialized = true;
+    }
   }, []);
 
   return (
