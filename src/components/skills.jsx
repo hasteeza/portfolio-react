@@ -1,5 +1,17 @@
 import React, { useState } from "react";
 import { Code, AppWindow, Layers, Cpu } from "lucide-react";
+import { RiTailwindCssLine } from "react-icons/ri";
+import { SiCanva, SiAdobephotoshop } from "react-icons/si";
+import { VscVscodeInsiders } from "react-icons/vsc";
+import { TbBrandVercel } from "react-icons/tb";
+import {
+  IoLogoHtml5,
+  IoLogoCss3,
+  IoLogoJavascript,
+  IoLogoReact,
+  IoLogoFigma,
+  IoLogoGithub,
+} from "react-icons/io5";
 
 export function Skills() {
   const [activeCategory, setActiveCategory] = useState("frontend");
@@ -18,7 +30,7 @@ export function Skills() {
       >
         <Layers size={20} color="white" /> Tech Stack
       </h2>
-      <nav className="flex justify-start items-center my-4 space-x-6">
+      <nav className="flex justify-start items-center my-4 space-x-4 sm:space-x-0">
         <button
           className={`flex items-center gap-1 cursor-pointer px-4 py-2 border-b-2 transition-all duration-300 ease-in-out ${
             activeCategory === "frontend"
@@ -28,7 +40,9 @@ export function Skills() {
           onClick={() => handleCategoryClick("frontend")}
         >
           <Code size={20} color="white" />
-          <span className="text-sm font-semibold uppercase">Frontend</span>
+          <span className="text-sm font-semibold uppercase sm:text-xs">
+            Frontend
+          </span>
         </button>
         <button
           className={`flex items-center gap-1 cursor-pointer px-4 py-2 border-b-2 transition-all duration-300 ease-in-out ${
@@ -39,7 +53,9 @@ export function Skills() {
           onClick={() => handleCategoryClick("uiux")}
         >
           <AppWindow size={20} color="white" />
-          <span className="text-sm font-semibold uppercase">Ui/Ux</span>
+          <span className="text-sm font-semibold uppercase sm:text-xs">
+            Ui/Ux
+          </span>
         </button>
         <button
           className={`flex items-center gap-1 cursor-pointer px-4 py-2 border-b-2 transition-all duration-300 ease-in-out ${
@@ -50,8 +66,8 @@ export function Skills() {
           onClick={() => handleCategoryClick("devtools")}
         >
           <Cpu size={20} color="white" />
-          <span className="text-sm font-semibold uppercase">
-            Developer Tools
+          <span className="text-sm font-semibold uppercase sm:text-xs">
+            Dev Tools
           </span>
         </button>
       </nav>
@@ -73,7 +89,7 @@ export function Skills() {
             data-aos-delay="200"
             className="flex bg-[rgb(17,17,17)] justify-center items-center h-12 gap-4"
           >
-            <img src="/svg/html.svg" alt="HTML" className="w-8 h-8" />
+            <IoLogoHtml5 className="text-2xl" />
             <span>HTML</span>
           </div>
           <div
@@ -83,7 +99,7 @@ export function Skills() {
             data-aos-delay="300"
             className="flex bg-[rgb(17,17,17)] justify-center items-center h-12 gap-4"
           >
-            <img src="/svg/css.svg" alt="CSS" className="w-8 h-8" />
+            <IoLogoCss3 className="text-2xl" />
             <span>CSS</span>
           </div>
           <div
@@ -93,7 +109,7 @@ export function Skills() {
             data-aos-delay="400"
             className="flex bg-[rgb(17,17,17)] justify-center items-center h-12 gap-4"
           >
-            <img src="/svg/js.svg" alt="JAVASCRIPT" className="w-8 h-8" />
+            <IoLogoJavascript className="text-2xl" />
             <span>JAVASCRIPT</span>
           </div>
           <div
@@ -103,7 +119,7 @@ export function Skills() {
             data-aos-delay="500"
             className="flex bg-[rgb(17,17,17)] justify-center items-center h-12 gap-4"
           >
-            <img src="/svg/tailwind.svg" alt="TAILWIND" className="w-8 h-8" />
+            <RiTailwindCssLine className="text-2xl" />
             <span>TAILWIND</span>
           </div>
           <div
@@ -113,7 +129,7 @@ export function Skills() {
             data-aos-delay="600"
             className="flex bg-[rgb(17,17,17)] justify-center items-center h-12 gap-4"
           >
-            <img src="/svg/react.svg" alt="REACT" className="w-8 h-8" />
+            <IoLogoReact className="text-2xl" />
             <span>REACT</span>
           </div>
         </div>
@@ -134,7 +150,7 @@ export function Skills() {
             data-aos-delay="200"
             className="flex bg-[rgb(17,17,17)] justify-center items-center h-12 gap-4"
           >
-            <img src="/svg/figma.svg" alt="FIGMA" className="w-8 h-8" />
+            <IoLogoFigma className="text-2xl" />
             <span>FIGMA</span>
           </div>
           <div
@@ -144,7 +160,7 @@ export function Skills() {
             data-aos-delay="300"
             className="flex bg-[rgb(17,17,17)] justify-center items-center h-12 gap-4"
           >
-            <img src="/svg/canva.svg" alt="CANVA" className="w-8 h-8" />
+            <SiCanva className="text-2xl" />
             <span>CANVA</span>
           </div>
           <div
@@ -154,7 +170,7 @@ export function Skills() {
             data-aos-delay="400"
             className="flex bg-[rgb(17,17,17)] justify-center items-center h-12 gap-4"
           >
-            <img src="/svg/ps.svg" alt="PHOTOSHOP" className="w-8 h-8" />
+            <SiAdobephotoshop className="text-2xl" />
             <span>PHOTOSHOP</span>
           </div>
         </div>
@@ -175,7 +191,7 @@ export function Skills() {
             data-aos-delay="200"
             className="flex bg-[rgb(17,17,17)] justify-center items-center h-12 gap-4"
           >
-            <img src="/svg/vscode.svg" alt="VS CODE" className="w-8 h-8" />
+            <VscVscodeInsiders className="text-2xl" />
             <span>VS Code</span>
           </div>
           <div
@@ -185,7 +201,7 @@ export function Skills() {
             data-aos-delay="300"
             className="flex bg-[rgb(17,17,17)] justify-center items-center h-12 gap-4"
           >
-            <img src="/svg/github.svg" alt="GITHUB" className="w-8 h-8" />
+            <IoLogoGithub className="text-2xl" />
             <span>Github</span>
           </div>
           <div
@@ -195,7 +211,7 @@ export function Skills() {
             data-aos-delay="400"
             className="flex bg-[rgb(17,17,17)] justify-center items-center h-12 gap-4"
           >
-            <img src="/svg/vercel.svg" alt="VERCEL" className="w-8 h-8" />
+            <TbBrandVercel className="text-2xl" />
             <span>Vercel</span>
           </div>
         </div>

@@ -51,12 +51,7 @@ function Hero() {
   }, []);
 
   return (
-    <main
-      style={{
-        background: "radial-gradient(circle at center, #1a1a1a, #000)",
-      }}
-      className="min-h-screen flex justify-center items-center relative p-6"
-    >
+    <main className="min-h-screen flex justify-center items-center relative p-6">
       <Particles
         id="tsparticles"
         init={particlesInit}
