@@ -1,5 +1,5 @@
 import React from "react";
-import { Images, ChevronRight } from "lucide-react";
+import { Images, ChevronRight, Bookmark } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export function Gallery() {
@@ -7,7 +7,6 @@ export function Gallery() {
     "flyerposter.png",
     "logoCasava.jpg",
     "muruk.jpg",
-    "aurora.jpg",
     "rio.jpg",
     "water.jpg",
     "typographyart.jpg",
@@ -16,6 +15,8 @@ export function Gallery() {
     "corpid.jpg",
     "esportChamp.jpg",
     "selfportrait.jpg",
+    "favicon-cassava.jpg",
+    "layoutlogo.jpg",
   ];
 
   return (
@@ -25,24 +26,37 @@ export function Gallery() {
           data-aos="fade-in"
           data-aos-duration="1200"
           data-aos-easing="ease-out-cubic"
-          className="flex gap-2 items-center"
+          className="flex text-xl font-bold capitalize items-center gap-2"
         >
-          <Images size={20} color="white" />
-          <h1 className="text-xl font-bold">Portfolio</h1>
+          <div className="flex items-center justify-center w-8 h-8 bg-[rgb(25,25,25)] rounded-md">
+            <Images size={20} color="white" />
+          </div>
+          <h1 className="text-xl font-semibold tracking-wider uppercase font-russo">
+            Portfolio
+          </h1>
         </div>
         <Link
           to="/portfoliopage"
           data-aos="fade-in"
           data-aos-duration="1200"
           data-aos-easing="ease-out-cubic"
-          className="flex items-center text-sm font-bold gap-1"
+          className="flex items-center text-sm font-bold gap-1 px-3 py-1.5 rounded-full bg-[rgb(25,25,25)] hover:bg-[rgb(35,35,35)] transition-colors duration-300"
         >
           <span className="font-bold">View all</span>
           <ChevronRight size={15} className="font-bold" />
         </Link>
       </div>
 
-      <div className="columns-4 gap-2 space-y-2 md:columns-3 border bg-[rgb(17,17,17)] border-[rgb(33,33,33)] rounded-md p-6">
+      <div className="flex items-center gap-2 mb-6 pl-2">
+        <div className="flex items-center justify-center w-6 h-6 bg-[rgb(25,25,25)] rounded-full">
+          <Bookmark size={12} fill="white" className="text-white" />
+        </div>
+        <h2 className="font-semibold text-sm uppercase tracking-wider font-inter">
+          Graphics
+        </h2>
+      </div>
+
+      <div className="columns-4 gap-2 space-y-2 md:columns-3 p-6 xs:columns-2">
         {imageFiles.map((file, index) => (
           <img
             key={file}

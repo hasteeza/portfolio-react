@@ -1,9 +1,4 @@
-import React, { useState } from "react";
-import { Code, AppWindow, Layers, Cpu } from "lucide-react";
-import { RiTailwindCssLine } from "react-icons/ri";
-import { SiCanva, SiAdobephotoshop } from "react-icons/si";
-import { VscVscodeInsiders } from "react-icons/vsc";
-import { TbBrandVercel } from "react-icons/tb";
+import React from "react";
 import {
   IoLogoHtml5,
   IoLogoCss3,
@@ -12,211 +7,122 @@ import {
   IoLogoFigma,
   IoLogoGithub,
 } from "react-icons/io5";
+import { RiTailwindCssLine } from "react-icons/ri";
+import { Layers } from "lucide-react";
+import { SiCanva, SiAdobephotoshop } from "react-icons/si";
+import { VscVscodeInsiders } from "react-icons/vsc";
+import { TbBrandVercel } from "react-icons/tb";
+import { motion } from "framer-motion";
+
+const SkillIcon = ({
+  icon: Icon,
+  name,
+  iconSize = "text-xl",
+  textSize = "text-sm",
+  paddingX = "px-3",
+  paddingY = "py-2",
+}) => (
+  <motion.div
+    initial={{
+      opacity: 0,
+      scale: 0.8,
+      filter: "blur(10px)",
+    }}
+    whileInView={{
+      opacity: 1,
+      scale: 1,
+      filter: "blur(0px)",
+    }}
+    transition={{
+      duration: 0.6,
+      ease: "easeOut",
+      delay: Math.random() * 0.4, // Enhanced staggered delay
+    }}
+    viewport={{ once: true }}
+    className={`flex items-center justify-center gap-2 ${paddingX} ${paddingY} 
+      bg-[rgb(17,17,17)] text-white rounded-full 
+      transition-all duration-500 ease-in-out
+      hover:shadow-lg hover:shadow-[rgba(255,255,255,0.1)]`}
+    whileHover={{
+      scale: 1.05,
+      transition: { duration: 0.3 },
+    }}
+    whileTap={{
+      scale: 0.95,
+      transition: { duration: 0.2 },
+    }}
+  >
+    <Icon className={`${iconSize} transition-all duration-300`} />
+    <span className={`${textSize} transition-all duration-300`}>{name}</span>
+  </motion.div>
+);
 
 export function Skills() {
-  const [activeCategory, setActiveCategory] = useState("frontend");
-
-  const handleCategoryClick = (category) => {
-    setActiveCategory(category);
-  };
+  const skills = [
+    { icon: IoLogoHtml5, name: "HTML" },
+    { icon: IoLogoCss3, name: "CSS" },
+    { icon: IoLogoJavascript, name: "JavaScript" },
+    { icon: IoLogoReact, name: "React" },
+    { icon: RiTailwindCssLine, name: "Tailwind" },
+    { icon: IoLogoFigma, name: "Figma" },
+    { icon: SiCanva, name: "Canva" },
+    { icon: SiAdobephotoshop, name: "Photoshop" },
+    { icon: VscVscodeInsiders, name: "VS Code" },
+    { icon: IoLogoGithub, name: "GitHub" },
+    { icon: TbBrandVercel, name: "Vercel" },
+  ];
 
   return (
-    <section className="bg-black text-white pt-4 pb-6 max-w-4xl mx-auto px-4 py-8 lg:px-6 font-geist">
-      <h2
-        data-aos="fade-in"
-        data-aos-duration="1200"
-        data-aos-easing="ease-out-cubic"
-        className="text-xl font-bold mb-2 capitalize flex items-center gap-2"
+    <div className="max-w-4xl mx-auto p-6 px-4 overflow-hidden">
+      <motion.div
+        initial={{
+          opacity: 0,
+          y: 20,
+          filter: "blur(10px)",
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          filter: "blur(0px)",
+        }}
+        transition={{
+          duration: 0.7,
+          ease: "easeOut",
+          delay: 0.2,
+        }}
+        viewport={{ once: true }}
+        className="flex text-xl font-bold capitalize items-center gap-2 mb-6"
       >
-        <Layers size={20} color="white" /> Tech Stack
-      </h2>
-      <nav className="flex justify-start items-center my-4 space-x-4 sm:space-x-0">
-        <button
-          className={`flex items-center gap-1 cursor-pointer px-4 py-2 border-b-2 transition-all duration-300 ease-in-out ${
-            activeCategory === "frontend"
-              ? "border-white text-white"
-              : "border-transparent text-gray-400 hover:text-white hover:border-white"
-          }`}
-          onClick={() => handleCategoryClick("frontend")}
-        >
-          <Code size={20} color="white" />
-          <span className="text-sm font-semibold uppercase sm:text-xs">
-            Frontend
-          </span>
-        </button>
-        <button
-          className={`flex items-center gap-1 cursor-pointer px-4 py-2 border-b-2 transition-all duration-300 ease-in-out ${
-            activeCategory === "uiux"
-              ? "border-white text-white"
-              : "border-transparent text-gray-400 hover:text-white hover:border-white"
-          }`}
-          onClick={() => handleCategoryClick("uiux")}
-        >
-          <AppWindow size={20} color="white" />
-          <span className="text-sm font-semibold uppercase sm:text-xs">
-            Ui/Ux
-          </span>
-        </button>
-        <button
-          className={`flex items-center gap-1 cursor-pointer px-4 py-2 border-b-2 transition-all duration-300 ease-in-out ${
-            activeCategory === "devtools"
-              ? "border-white text-white"
-              : "border-transparent text-gray-400 hover:text-white hover:border-white"
-          }`}
-          onClick={() => handleCategoryClick("devtools")}
-        >
-          <Cpu size={20} color="white" />
-          <span className="text-sm font-semibold uppercase sm:text-xs">
-            Dev Tools
-          </span>
-        </button>
-      </nav>
-
-      <div className="relative w-full overflow-hidden">
-        {/* Frontend Skills */}
-        <div
-          id="frontend"
-          className={`w-full grid grid-cols-3 gap-4 transition-all duration-500 ease-out sm:grid-cols-2 ${
-            activeCategory === "frontend"
-              ? "opacity-100 visible"
-              : "opacity-0 invisible absolute top-0 left-0"
-          }`}
-        >
-          <div
-            data-aos="zoom-in-up"
-            data-aos-easing="ease-in-out"
-            data-aos-duration="1000"
-            data-aos-delay="200"
-            className="flex bg-[rgb(17,17,17)] justify-center items-center h-12 gap-4"
-          >
-            <IoLogoHtml5 className="text-2xl" />
-            <span>HTML</span>
-          </div>
-          <div
-            data-aos="zoom-in-up"
-            data-aos-easing="ease-in-out"
-            data-aos-duration="1000"
-            data-aos-delay="300"
-            className="flex bg-[rgb(17,17,17)] justify-center items-center h-12 gap-4"
-          >
-            <IoLogoCss3 className="text-2xl" />
-            <span>CSS</span>
-          </div>
-          <div
-            data-aos="zoom-in-up"
-            data-aos-easing="ease-in-out"
-            data-aos-duration="1000"
-            data-aos-delay="400"
-            className="flex bg-[rgb(17,17,17)] justify-center items-center h-12 gap-4"
-          >
-            <IoLogoJavascript className="text-2xl" />
-            <span>JAVASCRIPT</span>
-          </div>
-          <div
-            data-aos="zoom-in-up"
-            data-aos-easing="ease-in-out"
-            data-aos-duration="1000"
-            data-aos-delay="500"
-            className="flex bg-[rgb(17,17,17)] justify-center items-center h-12 gap-4"
-          >
-            <RiTailwindCssLine className="text-2xl" />
-            <span>TAILWIND</span>
-          </div>
-          <div
-            data-aos="zoom-in-up"
-            data-aos-easing="ease-in-out"
-            data-aos-duration="1000"
-            data-aos-delay="600"
-            className="flex bg-[rgb(17,17,17)] justify-center items-center h-12 gap-4"
-          >
-            <IoLogoReact className="text-2xl" />
-            <span>REACT</span>
-          </div>
+        <div className="flex items-center justify-center w-8 h-8 bg-[rgb(25,25,25)] rounded-md">
+          <Layers size={20} color="white" />
         </div>
+        <h2 className="text-xl font-semibold tracking-wider uppercase font-russo">
+          Tech Stack
+        </h2>
+      </motion.div>
 
-        {/* Ui/Ux Skills */}
-        <div
-          id="uiux"
-          className={`w-full grid grid-cols-3 gap-4 transition-all duration-500 ease-out sm:grid-cols-2 ${
-            activeCategory === "uiux"
-              ? "opacity-100 visible"
-              : "opacity-0 invisible absolute top-0 left-0"
-          }`}
-        >
-          <div
-            data-aos="zoom-in-up"
-            data-aos-easing="ease-in-out"
-            data-aos-duration="1000"
-            data-aos-delay="200"
-            className="flex bg-[rgb(17,17,17)] justify-center items-center h-12 gap-4"
-          >
-            <IoLogoFigma className="text-2xl" />
-            <span>FIGMA</span>
-          </div>
-          <div
-            data-aos="zoom-in-up"
-            data-aos-easing="ease-in-out"
-            data-aos-duration="1000"
-            data-aos-delay="300"
-            className="flex bg-[rgb(17,17,17)] justify-center items-center h-12 gap-4"
-          >
-            <SiCanva className="text-2xl" />
-            <span>CANVA</span>
-          </div>
-          <div
-            data-aos="zoom-in-up"
-            data-aos-easing="ease-in-out"
-            data-aos-duration="1000"
-            data-aos-delay="400"
-            className="flex bg-[rgb(17,17,17)] justify-center items-center h-12 gap-4"
-          >
-            <SiAdobephotoshop className="text-2xl" />
-            <span>PHOTOSHOP</span>
-          </div>
-        </div>
-
-        {/* Developer Tools Skills */}
-        <div
-          id="devtools"
-          className={`w-full grid grid-cols-3 gap-4 transition-all duration-500 ease-out sm:grid-cols-2 ${
-            activeCategory === "devtools"
-              ? "opacity-100 visible"
-              : "opacity-0 invisible absolute top-0 left-0"
-          }`}
-        >
-          <div
-            data-aos="zoom-in-up"
-            data-aos-easing="ease-in-out"
-            data-aos-duration="1000"
-            data-aos-delay="200"
-            className="flex bg-[rgb(17,17,17)] justify-center items-center h-12 gap-4"
-          >
-            <VscVscodeInsiders className="text-2xl" />
-            <span>VS Code</span>
-          </div>
-          <div
-            data-aos="zoom-in-up"
-            data-aos-easing="ease-in-out"
-            data-aos-duration="1000"
-            data-aos-delay="300"
-            className="flex bg-[rgb(17,17,17)] justify-center items-center h-12 gap-4"
-          >
-            <IoLogoGithub className="text-2xl" />
-            <span>Github</span>
-          </div>
-          <div
-            data-aos="zoom-in-up"
-            data-aos-easing="ease-in-out"
-            data-aos-duration="1000"
-            data-aos-delay="400"
-            className="flex bg-[rgb(17,17,17)] justify-center items-center h-12 gap-4"
-          >
-            <TbBrandVercel className="text-2xl" />
-            <span>Vercel</span>
-          </div>
-        </div>
-      </div>
-    </section>
+      <motion.div
+        initial={{
+          opacity: 0,
+          filter: "blur(10px)",
+        }}
+        whileInView={{
+          opacity: 1,
+          filter: "blur(0px)",
+        }}
+        transition={{
+          duration: 0.7,
+          ease: "easeOut",
+          delay: 0.4,
+        }}
+        viewport={{ once: true }}
+        className="flex flex-wrap gap-y-2 gap-x-2 justify-left items-center font-geist"
+      >
+        {skills.map((skill, index) => (
+          <SkillIcon key={index} icon={skill.icon} name={skill.name} />
+        ))}
+      </motion.div>
+    </div>
   );
 }
 

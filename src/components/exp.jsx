@@ -4,7 +4,7 @@ import { TbLayoutDashboardFilled } from "react-icons/tb";
 import { MdDevices } from "react-icons/md";
 import { BsGearWideConnected } from "react-icons/bs";
 import { BadgePercent, ChevronRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const milestones = [
   { title: "Company-Role", company: "Company-Name", year: "2025" },
@@ -45,17 +45,69 @@ export function Experience() {
   }, []);
 
   return (
-    <main className="flex w-full gap-4 border-y border-[rgb(33,33,33)] rounded-sm my-6 max-w-4xl mx-auto px-4 py-8 lg:px-6 font-geist md:flex-col md:gap-8">
+    <motion.main
+      initial={{
+        opacity: 0,
+        y: 20,
+        filter: "blur(10px)",
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        filter: "blur(0px)",
+      }}
+      transition={{
+        duration: 0.6,
+        ease: "easeOut",
+      }}
+      viewport={{ once: true }}
+      className="flex w-full gap-4 border-y border-[rgb(33,33,33)] rounded-sm my-6 max-w-4xl mx-auto px-4 py-8 lg:px-6 md:flex-col md:gap-8"
+    >
       <section className="w-1/2 md:w-full">
-        <div className="flex items-center gap-2 text-xl font-bold capitalize mb-6">
-          <FaTools />
-          <h6>What I Do?</h6>
-        </div>
-        <div className="text-[13px]">
-          <div
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="200"
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 20,
+            filter: "blur(10px)",
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            filter: "blur(0px)",
+          }}
+          transition={{
+            duration: 0.6,
+            ease: "easeOut",
+          }}
+          viewport={{ once: true }}
+          className="flex text-xl font-bold capitalize items-center gap-2 mb-6"
+        >
+          <div className="flex items-center justify-center w-8 h-8 bg-[rgb(25,25,25)] rounded-md">
+            <FaTools />
+          </div>
+          <h1 className="text-xl font-semibold tracking-wider uppercase font-russo">
+            What I Do?
+          </h1>
+        </motion.div>
+
+        <div className="text-[13px] font-geist">
+          <motion.div
+            initial={{
+              opacity: 0,
+              x: -20,
+              filter: "blur(10px)",
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              filter: "blur(0px)",
+            }}
+            transition={{
+              duration: 0.6,
+              delay: 0.2,
+              ease: "easeOut",
+            }}
+            viewport={{ once: true }}
             className="flex items-center gap-4 md:mb-6"
           >
             <FaLaptopCode className="text-9xl" />
@@ -68,11 +120,24 @@ export function Experience() {
                 experiences through interactive and responsive interfaces.
               </p>
             </article>
-          </div>
-          <div
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="300"
+          </motion.div>
+          <motion.div
+            initial={{
+              opacity: 0,
+              x: -20,
+              filter: "blur(10px)",
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              filter: "blur(0px)",
+            }}
+            transition={{
+              duration: 0.6,
+              delay: 0.3,
+              ease: "easeOut",
+            }}
+            viewport={{ once: true }}
             className="flex items-center gap-4 md:mb-6"
           >
             <TbLayoutDashboardFilled className="text-9xl" />
@@ -85,11 +150,24 @@ export function Experience() {
                 to create visually compelling and highly functional interfaces.
               </p>
             </article>
-          </div>
-          <div
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="400"
+          </motion.div>
+          <motion.div
+            initial={{
+              opacity: 0,
+              x: -20,
+              filter: "blur(10px)",
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              filter: "blur(0px)",
+            }}
+            transition={{
+              duration: 0.6,
+              delay: 0.4,
+              ease: "easeOut",
+            }}
+            viewport={{ once: true }}
             className="flex items-center gap-4 md:mb-6"
           >
             <BsGearWideConnected className="text-9xl" />
@@ -104,11 +182,24 @@ export function Experience() {
                 mobile-friendliness—enhancing user engagement and conversions.
               </p>
             </article>
-          </div>
-          <div
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="500"
+          </motion.div>
+          <motion.div
+            initial={{
+              opacity: 0,
+              x: -20,
+              filter: "blur(10px)",
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              filter: "blur(0px)",
+            }}
+            transition={{
+              duration: 0.6,
+              delay: 0.5,
+              ease: "easeOut",
+            }}
+            viewport={{ once: true }}
             className="flex items-center gap-4 md:mb-6"
           >
             <MdDevices className="text-9xl" />
@@ -121,17 +212,36 @@ export function Experience() {
                 experience for every user.
               </p>
             </article>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       <section className="w-1/2 md:w-full">
-        <div className="flex justify-between items-center mb-6">
-          <div className="flex items-center gap-2 text-xl font-bold capitalize">
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 20,
+            filter: "blur(10px)",
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            filter: "blur(0px)",
+          }}
+          transition={{
+            duration: 0.6,
+            ease: "easeOut",
+          }}
+          viewport={{ once: true }}
+          className="flex text-xl font-bold capitalize items-center gap-2 mb-6"
+        >
+          <div className="flex items-center justify-center w-8 h-8 bg-[rgb(25,25,25)] rounded-md">
             <BadgePercent />
-            <h1>Milestones</h1>
           </div>
-        </div>
+          <h1 className="text-xl font-semibold tracking-wider uppercase font-russo">
+            Milestones
+          </h1>
+        </motion.div>
 
         <div
           ref={containerRef}
@@ -145,12 +255,25 @@ export function Experience() {
           ></div>
 
           {milestones.map((milestone, index) => (
-            <div
+            <motion.div
               key={index}
-              className="relative flex items-start mb-8"
-              data-aos="fade-up"
-              data-aos-delay={index * 50}
-              data-aos-duration="600"
+              initial={{
+                opacity: 0,
+                x: -20,
+                filter: "blur(10px)",
+              }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+                filter: "blur(0px)",
+              }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.1,
+                ease: "easeOut",
+              }}
+              viewport={{ once: true }}
+              className="relative font-geist flex items-start mb-8"
             >
               <div className="absolute left-[-7px] top-1/2 -translate-y-1/2 w-4 h-4 bg-slate-950 border-2 border-white rounded-full hover:bg-white transition-all duration-300 z-10"></div>
 
@@ -164,11 +287,11 @@ export function Experience() {
               <time className="ml-auto text-xs font-bold text-gray-400 border border-[rgb(53,53,53)] px-3 py-1 rounded-full">
                 {milestone.year}
               </time>
-            </div>
+            </motion.div>
           ))}
         </div>
       </section>
-    </main>
+    </motion.main>
   );
 }
 

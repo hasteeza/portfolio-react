@@ -40,7 +40,7 @@ export default {
         plex: ['IBM Plex Mono', 'monospace'],
         bebas: ['Bebas Neue', 'sans-serif'],
         galaxy: ['SF Distant Galaxy', 'sans-serif'],
-        russo: ["Russo One", "sans-serif"],
+        russo: ['Russo One', "sans-serif"],
         orbitron: ["Orbitron", "sans-serif"],
         iso: ["Rubik Iso", "sans-serif"],
       },

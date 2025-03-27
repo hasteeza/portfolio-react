@@ -8,6 +8,7 @@ import ProjectPage from "./pages/projectpage";
 import MilestonePage from "./pages/milestonepage";
 import PortfolioPage from "./pages/portfoliopage";
 import CertificationPage from "./pages/certificationpage";
+import ScrollToTop from "./components/scrollTop";
 function App() {
   useEffect(() => {
     if (!window.AOSInitialized) {
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="/app" element={<HomePage />} />
