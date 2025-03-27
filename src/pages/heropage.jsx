@@ -128,17 +128,17 @@ function Hero() {
       />
 
       <section
-        className="max-w-3xl text-center relative z-10"
+        className="text-center relative z-10"
         data-aos="fade-in"
         data-aos-duration="1200"
         data-aos-easing="ease-in-out"
       >
         <SplitText
           text="Terence Dave Natad"
-          className="text-6xl md:text-5xl font-black text-white uppercase font-galaxy tracking-tighter"
+          className="text-7xl font-black text-white uppercase font-russo tracking-normal lg:text-6xl md:text-xl sm:text-lg"
         />
         <h2
-          className="text-2xl md:text-3xl font-semibold mb-6 text-white font-geist"
+          className="text-3xl font-semibold mb-6 text-white font-geist md:text-lg"
           data-aos="fade-in"
           data-aos-duration="1200"
           data-aos-delay="500"
@@ -151,7 +151,7 @@ function Hero() {
 
         <div className="h-20">
           <p
-            className="text-xl md:text-2xl text-white font-medium"
+            className="text-xl md:text-lg text-white font-medium"
             data-aos="zoom-in"
             data-aos-duration="1300"
             data-aos-easing="ease-in-out"
