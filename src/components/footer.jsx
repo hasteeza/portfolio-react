@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-      <footer className="max-w-4xl mx-auto px-4 py-8 mt-12 mb-8 font-geist">
+      <footer className="max-w-4xl mx-auto px-4 py-8 mt-12 font-geist">
         <p className="text-sm font-bold">
           Designed & Built by Terence Dave Natad
         </p>

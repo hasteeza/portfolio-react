@@ -40,6 +40,15 @@ const projects = [
     video: "video/AudAlert.mp4",
     apk: "#",
   },
+  {
+    title: "Scientific Calculator",
+    description: "Vivamus sagittis lacus vel augue laoreet rutrum faucibus.",
+    tags: ["Web Design", "Branding", "Motion Design"],
+    image: "images/sci-cal.png",
+    video: "path/to/liquid-echo-demo.mp4",
+    website: "https://tdrn-scientific-calculator.netlify.app/",
+    source: "#",
+  },
 ];
 
 const ProjectCard = ({ project, index }) => {
@@ -131,12 +140,14 @@ const ProjectCard = ({ project, index }) => {
             <>
               <a
                 href={project.website}
+                target="_blank"
                 className="flex items-center gap-1.5 bg-[rgb(40,40,40)] hover:bg-[rgb(50,50,50)] text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300"
               >
                 Website
               </a>
               <a
                 href={project.source}
+                target="_blank"
                 className="flex items-center gap-1.5 border border-[rgb(40,40,40)] hover:border-[rgb(60,60,60)] hover:bg-[rgb(25,25,25)] text-white px-4 py-2 rounded-md text-sm font-medium transition-all duration-300"
               >
                 <Github size={14} />

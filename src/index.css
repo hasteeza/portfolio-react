@@ -28,4 +28,11 @@ body{
     font-weight: normal;
     font-style: normal;
   }
+
+  @font-face {
+    font-family: 'Reospec';
+    src: local('Reospec'), url('/fonts/Reospec.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
   

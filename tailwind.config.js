@@ -43,6 +43,7 @@ export default {
         russo: ['Russo One', "sans-serif"],
         orbitron: ["Orbitron", "sans-serif"],
         iso: ["Rubik Iso", "sans-serif"],
+        reospec: ['Reospec', 'sans-serif'],
       },
     },
   },

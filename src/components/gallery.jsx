@@ -56,7 +56,7 @@ export function Gallery() {
         </h2>
       </div>
 
-      <div className="columns-4 gap-2 space-y-2 md:columns-3 p-6 xs:columns-2">
+      <div className="columns-4 gap-2 space-y-2 md:columns-3 p-6 xs:columns-3">
         {imageFiles.map((file, index) => (
           <img
             key={file}

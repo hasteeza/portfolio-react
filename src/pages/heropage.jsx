@@ -51,7 +51,7 @@ function Hero() {
   }, []);
 
   return (
-    <main className="min-h-screen flex justify-center items-center relative p-6">
+    <main className="min-h-screen flex flex-col justify-center items-center relative p-6 overflow-hidden">
       <Particles
         id="tsparticles"
         init={particlesInit}
@@ -127,59 +127,66 @@ function Hero() {
         className="absolute inset-0 z-0"
       />
 
-      <section
-        className="text-center relative z-10"
-        data-aos="fade-in"
-        data-aos-duration="1200"
-        data-aos-easing="ease-in-out"
-      >
-        <SplitText
-          text="Terence Dave Natad"
-          className="text-7xl font-black text-white uppercase font-russo tracking-normal lg:text-6xl md:text-xl sm:text-lg"
-        />
-        <h2
-          className="text-3xl font-semibold mb-6 text-white font-geist md:text-lg"
+      <div className="w-full">
+        <section
+          className="text-center relative z-10 flex flex-col items-center justify-center"
           data-aos="fade-in"
           data-aos-duration="1200"
-          data-aos-delay="500"
           data-aos-easing="ease-in-out"
         >
-          I <span className="text-[rgb(0,173,181)]">design</span> and{" "}
-          <span className="text-[rgb(245,158,11)]">build</span> things on the
-          web
-        </h2>
+          <SplitText
+            text="Terence Dave Natad"
+            className="text-8xl lg:text-6xl sm:text-2xl font-black text-white uppercase font-reospec"
+          />
 
-        <div className="h-20">
           <p
-            className="text-xl md:text-lg text-white font-medium"
-            data-aos="zoom-in"
-            data-aos-duration="1300"
+            className="text-2xl tracking-widest lg:text-xl md:text-lg sm:text-sm font-medium my-6 text-white font-galaxy"
+            data-aos="fade-in"
+            data-aos-duration="1200"
+            data-aos-delay="500"
             data-aos-easing="ease-in-out"
           >
-            <span className="mr-2">A</span>
-            <span className="border-r-2 border-gray-500 pr-1 animate-pulse font-plex">
-              {text}
-            </span>
+            I <span className="text-[rgb(0,173,181)]">design</span> and{" "}
+            <span className="text-[rgb(245,158,11)]">build</span> things on the
+            web
           </p>
-        </div>
 
-        <Link
-          to="/app"
-          className="inline-flex justify-center items-center mt-6 px-6 py-3 rounded-lg bg-[rgb(53,53,53)] text-white hover:bg-[rgb(17,17,17)] transition duration-300 ease-in-out"
-          data-aos="fade-up"
-          data-aos-duration="1400"
-          data-aos-easing="ease-in-out"
-          data-aos-delay="200"
-        >
-          <ShinyText text="Explore my work" className="mr-2 font-geist" />
-          <motion.div
-            animate={{ x: [10, 0, 10] }}
-            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+          <div className="h-16 flex items-center justify-center">
+            <p
+              className="text-xl md:text-lg sm:text-base text-white font-medium"
+              data-aos="zoom-in"
+              data-aos-duration="1300"
+              data-aos-easing="ease-in-out"
+            >
+              <span className="mr-2">A</span>
+              <span className="border-r-2 border-gray-500 pr-1 animate-pulse font-plex">
+                {text}
+              </span>
+            </p>
+          </div>
+
+          <Link
+            to="/app"
+            className="inline-flex justify-center items-center mt-8 px-6 py-3 rounded-lg bg-[rgb(53,53,53)] text-white hover:bg-[rgb(17,17,17)] transition duration-300 ease-in-out"
+            data-aos="fade-up"
+            data-aos-duration="1400"
+            data-aos-easing="ease-in-out"
+            data-aos-delay="200"
           >
-            <CircleChevronRight size={18} />
-          </motion.div>
-        </Link>
-      </section>
+            <ShinyText text="Explore my work" className="mr-2 font-geist" />
+            <motion.div
+              animate={{ x: [10, 0, 10] }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              <CircleChevronRight size={18} />
+            </motion.div>
+          </Link>
+        </section>
+      </div>
     </main>
   );
 }
