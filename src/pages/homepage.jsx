@@ -5,7 +5,7 @@ import { Experience } from "../components/exp";
 import { Skills } from "../components/skills";
 import { Projects } from "../components/projects";
 import { Gallery } from "../components/gallery";
-import Achievement from "../components/achievement";
+import Certificate from "../components/certificate";
 import Footer from "../components/footer";
 
 function HomePage() {
@@ -17,7 +17,7 @@ function HomePage() {
       <Skills />
       <Projects />
       <Gallery />
-      <Achievement />
+      <Certificate />
       <Footer />
     </>
   );

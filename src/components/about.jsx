@@ -76,7 +76,7 @@ export function About() {
               delay: 0.5,
             }}
             viewport={{ once: true }}
-            className="mt-2 text-base font-medium leading-6 font-geist"
+            className="mt-2 text-sm font-medium leading-6 font-geist"
           >
             I'm a front-end developer and UI/UX designer specializing in
             creating dynamic, user-friendly web applications with React.js and
@@ -94,7 +94,7 @@ export function About() {
               delay: 0.7,
             }}
             viewport={{ once: true }}
-            className="mt-4 text-base font-medium leading-6 font-geist"
+            className="mt-4 text-sm font-medium leading-6 font-geist"
           >
             Recently, I've been working on expanding my understanding of
             React.js and improving my front-end programming skills. I'm also
@@ -116,7 +116,7 @@ export function About() {
           fetchpriority="high"
           width={200}
           className="object-cover aspect-3/2 rounded-lg"
-          src="/images/profile-w.jpg"
+          src="/images/me-guitar.webp"
           alt="Terence"
         />
       </div>

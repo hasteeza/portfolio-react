@@ -11,14 +11,16 @@ import CertificationPage from "./pages/certificationpage";
 import ScrollToTop from "./components/scrollTop";
 function App() {
   useEffect(() => {
-    if (!window.AOSInitialized) {
-      AOS.init({
-        once: true,
-      });
-      window.AOSInitialized = true;
-    }
+    AOS.init({
+      duration: 800,
+      easing: "ease-out-cubic",
+      once: false,
+      mirror: true,
+      offset: 50,
+      delay: 0,
+      anchorPlacement: "top-bottom",
+    });
   }, []);
-
   return (
     <Router>
       <ScrollToTop />

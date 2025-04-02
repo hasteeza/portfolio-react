@@ -54,7 +54,7 @@ const PortfolioPage = () => {
           storytelling!
         </p>
 
-        <div className="columns-3 gap-2 space-y-2 md:columns-4 p-6">
+        <div className="columns-3 gap-2 space-y-2 md:columns-3 p-6">
           {imageFiles.map((file, index) => (
             <img
               key={file}

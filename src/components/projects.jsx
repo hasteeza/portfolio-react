@@ -1,4 +1,3 @@
-"use client";
 import {
   Rocket,
   FolderClosed,
@@ -27,19 +26,19 @@ const projects = [
     source: "#",
   },
   {
-    title: "Movie Clone",
-    description: "Nullam quis risus eget urna mollis ornare vel eu leo.",
-    tags: ["UX Design", "UI Design"],
-    image: "images/movie.png",
-    website: "#",
-    source: "#",
-  },
-  {
     title: "AudAlert",
     description: "Donec ullamcorper nulla non metus auctor fringilla.",
     tags: ["UX Design", "UI Design", "Mobile App"],
     image: "images/AudAlert-placeholder.png",
     apk: "#", // Replace with actual APK download link
+  },
+  {
+    title: "Scientific Calculator",
+    description: "Nullam quis risus eget urna mollis ornare vel eu leo.",
+    tags: ["UX Design", "UI Design"],
+    image: "images/sci-cal.png",
+    website: "https://tdrn-scientific-calculator.netlify.app/",
+    source: "#",
   },
 ];
 
@@ -137,6 +136,7 @@ export function Projects() {
                   <>
                     <a
                       href={project.website}
+                      target="_blank"
                       className="flex items-center gap-1.5 bg-[rgb(40,40,40)] hover:bg-[rgb(50,50,50)] text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300"
                     >
                       Website
