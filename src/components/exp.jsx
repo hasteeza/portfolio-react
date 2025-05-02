@@ -3,11 +3,11 @@ import { FaTools, FaLaptopCode } from "react-icons/fa";
 import { TbLayoutDashboardFilled } from "react-icons/tb";
 import { MdDevices } from "react-icons/md";
 import { BsGearWideConnected } from "react-icons/bs";
-import { BadgePercent, ChevronRight } from "lucide-react";
+import { BadgePercent } from "lucide-react";
 import { motion } from "framer-motion";
 
 const milestones = [
-  { title: "Company-Role", company: "Company-Name", year: "2025" },
+  { title: "Frontend Developer", company: "Innovision", year: "2025" },
   {
     title: "BS Information Technology",
     company: "Western Mindanao State University",

@@ -6,22 +6,34 @@ import { Rocket, FolderClosed, Download, Github } from "lucide-react";
 
 const projects = [
   {
-    title: "Innovision",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    tags: ["UX Design", "UI Design"],
-    image: "images/webino.png",
-    video: "path/to/innovision-demo.mp4",
-    website: "#",
-    source: "#",
+    title: "PokeWeb",
+    description:
+      "Developed a Pokédex web application that allows users to search, view, and manage Pokémon data, build teams, and run battle simulations with real-time stats and type-based visuals using React.js, Tailwind CSS, and the PokéAPI.",
+    tags: ["React", "Tailwind", "UI Design"],
+    image: "images/pokeweb.png",
+    video: "",
+    website: "https://tdrn-pokeweb.netlify.app/",
+    source: "https://github.com/hasteeza/pokemon",
+  },
+  {
+    title: "IVET Blog Site",
+    description:
+      "Developed a blog site featuring engaging content on tours, travel experiences, and tech insights — combining storytelling with practical knowledge to inspire and inform readers.",
+    tags: ["React", "Tailwind", "UI Design"],
+    image: "images/ivet-blog-web.png",
+    video: "",
+    website: "https://tdrn-blog.netlify.app/",
+    source: "https://github.com/hasteeza/ivet-blog",
   },
   {
     title: "Liquid Echo",
-    description: "Vivamus sagittis lacus vel augue laoreet rutrum faucibus.",
-    tags: ["Web Design", "Branding", "Motion Design"],
+    description:
+      "Created the Liquid Echo website as a Tailwind CSS practice project, focusing on responsive design, clean layouts, and modern UI components.",
+    tags: ["Web Design", "Tailwind"],
     image: "images/liquid-echo-web.png",
     video: "path/to/liquid-echo-demo.mp4",
     website: "#",
-    source: "#",
+    source: "https://github.com/hasteeza/liquid-echo",
   },
   {
     title: "Movie Clone",
@@ -34,20 +46,22 @@ const projects = [
   },
   {
     title: "AudAlert",
-    description: "Donec ullamcorper nulla non metus auctor fringilla.",
-    tags: ["UX Design", "UI Design", "Mobile App"],
+    description:
+      "Developed AudAlert, a mobile app that monitors and detects sounds, allowing users to view, analyze, and manage sound data with real-time alerts and device connection features.",
+    tags: ["React Native", "UI Design", "Mobile App"],
     image: "images/AudAlert-placeholder.png",
     video: "video/AudAlert.mp4",
     apk: "#",
   },
   {
     title: "Scientific Calculator",
-    description: "Vivamus sagittis lacus vel augue laoreet rutrum faucibus.",
-    tags: ["Web Design", "Branding", "Motion Design"],
+    description:
+      "Developed a responsive scientific calculator using React and Tailwind CSS, featuring advanced functions like trigonometry, exponentials, and real-time input handling.",
+    tags: ["React", "Tailwind"],
     image: "images/sci-cal.png",
     video: "path/to/liquid-echo-demo.mp4",
     website: "https://tdrn-scientific-calculator.netlify.app/",
-    source: "#",
+    source: "https://github.com/hasteeza/scientific-calculator",
   },
 ];
 

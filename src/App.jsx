@@ -5,7 +5,6 @@ import "aos/dist/aos.css";
 import Hero from "./pages/heropage";
 import HomePage from "./pages/homepage";
 import ProjectPage from "./pages/projectpage";
-import MilestonePage from "./pages/milestonepage";
 import PortfolioPage from "./pages/portfoliopage";
 import CertificationPage from "./pages/certificationpage";
 import ScrollToTop from "./components/scrollTop";
@@ -27,7 +26,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="/app" element={<HomePage />} />
-        <Route path="/milestonepage" element={<MilestonePage />} />
         <Route path="/projectpage" element={<ProjectPage />} />
         <Route path="/portfoliopage" element={<PortfolioPage />} />
         <Route path="/certificationpage" element={<CertificationPage />} />
