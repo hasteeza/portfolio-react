@@ -114,9 +114,9 @@ export function About() {
           }}
           viewport={{ once: true }}
           fetchpriority="high"
-          width={200}
+          width={250}
           className="object-cover aspect-3/2 rounded-lg"
-          src="/images/me-guitar.webp"
+          src="/images/pp.jpg"
           alt="Terence"
         />
       </div>
@@ -187,7 +187,7 @@ export function About() {
                 <a
                   className="border w-full bg-black border-[rgb(33,33,33)] rounded-md px-4 py-2 hover:bg-slate-900 duration-100"
                   target="_blank"
-                  href="https://calendly.com/natadterencedave"
+                  href=""
                 >
                   <div className="flex items-center justify-between font-medium text-sm">
                     <span>Download CV</span>

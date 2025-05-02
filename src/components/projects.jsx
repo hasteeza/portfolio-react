@@ -7,47 +7,74 @@ import {
   Download,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const projects = [
   {
-    title: "Innovision",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    tags: ["UX Design", "UI Design"],
-    image: "images/webino.png",
-    website: "#",
-    source: "#",
+    title: "PokeWeb",
+    description:
+      "Developed a Pokédex web application that allows users to search, view, and manage Pokémon data, build teams, and run battle simulations with real-time stats and type-based visuals using React.js, Tailwind CSS, and the PokéAPI.",
+    tags: ["React", "Tailwind", "UI Design"],
+    image: "images/pokeweb.png",
+    website: "https://tdrn-pokeweb.netlify.app/",
+    source: "https://github.com/hasteeza/pokemon",
   },
   {
     title: "Liquid Echo",
-    description: "Vivamus sagittis lacus vel augue laoreet rutrum faucibus.",
-    tags: ["Web Design", "Branding", "Motion Design"],
+    description:
+      "Created the Liquid Echo website as a Tailwind CSS practice project, focusing on responsive design, clean layouts, and modern UI components.",
+    tags: ["Web Design", "Tailwind"],
     image: "images/liquid-echo-web.png",
-    website: "#",
-    source: "#",
+    website: "https://hasteeza.github.io/liquid-echo/templates",
+    source: "https://github.com/hasteeza/liquid-echo",
   },
   {
     title: "AudAlert",
-    description: "Donec ullamcorper nulla non metus auctor fringilla.",
-    tags: ["UX Design", "UI Design", "Mobile App"],
+    description:
+      "Developed AudAlert, a mobile app that monitors and detects sounds, allowing users to view, analyze, and manage sound data with real-time alerts and device connection features.",
+    tags: ["React Native", "UI Design", "Mobile App"],
     image: "images/AudAlert-placeholder.png",
     apk: "#", // Replace with actual APK download link
   },
   {
     title: "Scientific Calculator",
-    description: "Nullam quis risus eget urna mollis ornare vel eu leo.",
-    tags: ["UX Design", "UI Design"],
+    description:
+      "Developed a responsive scientific calculator using React and Tailwind CSS, featuring advanced functions like trigonometry, exponentials, and real-time input handling.",
+    tags: ["React", "Tailwind"],
     image: "images/sci-cal.png",
     website: "https://tdrn-scientific-calculator.netlify.app/",
-    source: "#",
+    source: "https://github.com/hasteeza/scientific-calculator",
   },
 ];
 
 export function Projects() {
+  useEffect(() => {
+    // Add custom animation class to AOS
+    if (typeof document !== "undefined") {
+      const style = document.createElement("style");
+      style.innerHTML = `
+        /* Blurry fade-up effect */
+        [data-aos="blurry-fade-up"] {
+          opacity: 0;
+          transform: translate3d(0, 30px, 0);
+          filter: blur(10px);
+          transition-property: opacity, transform, filter;
+        }
+        [data-aos="blurry-fade-up"].aos-animate {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+          filter: blur(0);
+        }
+      `;
+      document.head.appendChild(style);
+    }
+  }, []);
+
   return (
     <section className="w-full border-y border-[rgb(33,33,33)] rounded-sm my-6 py-8 max-w-4xl mx-auto px-4 lg:px-6">
       <div className="flex justify-between items-center mb-8">
         <div
-          data-aos="fade-in"
+          data-aos="blurry-fade-up"
           data-aos-duration="1200"
           data-aos-easing="ease-out-cubic"
           className="flex text-xl font-bold capitalize items-center gap-2"
@@ -61,7 +88,7 @@ export function Projects() {
         </div>
         <Link
           to="/projectpage"
-          data-aos="fade-in"
+          data-aos="blurry-fade-up"
           data-aos-duration="1200"
           data-aos-easing="ease-out-cubic"
           className="flex items-center text-sm font-bold gap-1 px-3 py-1.5 rounded-full bg-[rgb(25,25,25)] hover:bg-[rgb(35,35,35)] transition-colors duration-300"
@@ -71,7 +98,12 @@ export function Projects() {
         </Link>
       </div>
 
-      <div className="flex items-center gap-2 mb-6 pl-2">
+      <div
+        className="flex items-center gap-2 mb-6 pl-2"
+        data-aos="blurry-fade-up"
+        data-aos-duration="800"
+        data-aos-delay="100"
+      >
         <div className="flex items-center justify-center w-6 h-6 bg-[rgb(25,25,25)] rounded-full">
           <Bookmark size={12} fill="white" className="text-white" />
         </div>
@@ -80,14 +112,14 @@ export function Projects() {
         </h2>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-1 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-1 gap-3">
         {projects.map((project, index) => (
           <div
             key={index}
             className="group bg-[rgb(17,17,17)] overflow-hidden rounded-lg border border-[rgb(33,33,33)] hover:border-[rgb(50,50,50)] transition-all duration-300 hover:shadow-[0_0_15px_rgba(0,0,0,0.3)]"
-            data-aos="fade-up"
+            data-aos="blurry-fade-up"
             data-aos-duration="1000"
-            data-aos-delay={`${index * 100}`}
+            data-aos-delay={`${index * 150}`}
           >
             <div className="relative h-56 overflow-hidden">
               <img

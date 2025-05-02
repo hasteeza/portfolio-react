@@ -6,6 +6,7 @@ import { Skills } from "../components/skills";
 import { Projects } from "../components/projects";
 import { Gallery } from "../components/gallery";
 import Certificate from "../components/certificate";
+import Contact from "../components/contact";
 import Footer from "../components/footer";
 
 function HomePage() {
@@ -18,6 +19,7 @@ function HomePage() {
       <Projects />
       <Gallery />
       <Certificate />
+      <Contact />
       <Footer />
     </>
   );
