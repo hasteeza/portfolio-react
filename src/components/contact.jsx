@@ -207,25 +207,25 @@ const Contact = () => {
               <h3 className="font-semibold mb-4">Follow Me:</h3>
               <div className="flex space-x-3">
                 <a
-                  href="#"
+                  href="https://www.facebook.com/terence.terence.75457081"
                   className="border bg-black border-[rgb(33,33,33)] p-4 rounded-xl text-white transition-all duration-300 hover:scale-110 hover:shadow-lg group"
                 >
                   <FaFacebookF className="h-5 w-5 transition-transform group-hover:animate-pulse" />
                 </a>
                 <a
-                  href="#"
+                  href="https://github.com/hasteeza"
                   className="border bg-black border-[rgb(33,33,33)] p-4 rounded-xl text-white transition-all duration-300 hover:scale-110 hover:shadow-lg group"
                 >
                   <FaGithub className="h-5 w-5 transition-transform group-hover:animate-pulse" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/terence-dave-natad-952b3b359/"
                   className="border bg-black border-[rgb(33,33,33)] p-4 rounded-xl text-white transition-all duration-300 hover:scale-110 hover:shadow-lg group"
                 >
                   <FaLinkedinIn className="h-5 w-5 transition-transform group-hover:animate-pulse" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/terence.dev0/"
                   className="border bg-black border-[rgb(33,33,33)] p-4 rounded-xl text-white transition-all duration-300 hover:scale-110 hover:shadow-lg group"
                 >
                   <FaInstagram className="h-5 w-5 transition-transform group-hover:animate-pulse" />

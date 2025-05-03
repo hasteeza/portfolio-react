@@ -136,7 +136,7 @@ function Hero() {
         >
           <SplitText
             text="Terence Dave Natad"
-            className="text-8xl lg:text-6xl sm:text-2xl font-black text-white uppercase font-bebas"
+            className="text-8xl lg:text-6xl sm:text-4xl font-black text-white uppercase font-bebas"
           />
 
           <p
