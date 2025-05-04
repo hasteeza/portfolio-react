@@ -185,9 +185,10 @@ export function About() {
                   </div>
                 </a>
                 <a
-                  className="border w-full bg-black border-[rgb(33,33,33)] rounded-md px-4 py-2 hover:bg-slate-900 duration-100"
+                  className="border w-full bg-black border-[rgb(33,33,33)] cursor-pointer rounded-md px-4 py-2 hover:bg-slate-900 duration-100"
                   target="_blank"
-                  href=""
+                  href="/pdf/myCV.pdf"
+                  download="natadterencedave.pdf"
                 >
                   <div className="flex items-center justify-between font-medium text-sm">
                     <span>Download CV</span>
