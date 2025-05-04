@@ -94,6 +94,14 @@ const Certificate = () => {
       alt: "Codeliber Badge",
       issuedDate: "04/08/2025",
     },
+    {
+      id: 8,
+      image: "images/freecodecampbadge.png",
+      title: "Responsive Web Design",
+      issuer: "FreeCodeCamp",
+      alt: "FreeCodeCamp Badge",
+      issuedDate: "05/04/2025",
+    },
   ];
 
   return (

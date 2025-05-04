@@ -87,6 +87,11 @@ const CertificationPage = () => {
       src: "images/cyber-cert.png",
       alt: "Codeliber-Certification",
     },
+    {
+      id: 16,
+      src: "images/free-code-camp.png",
+      alt: "Codeliber-Certification",
+    },
 
     // You can easily add more certificates here
   ];
